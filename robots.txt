@@ -1,0 +1,29 @@
+# https://jaralock.com/
+#
+# Everything here is public and meant to be found. That includes the
+# security document — a buyer's security team reading it before they
+# contact us is the point of publishing it.
+
+User-agent: *
+Allow: /
+
+# Named explicitly because more people now find software by asking an
+# assistant than by typing a query, and some of these crawlers treat an
+# unlisted agent conservatively. There is nothing here worth withholding
+# from them.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://jaralock.com/sitemap.xml

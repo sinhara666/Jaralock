@@ -345,6 +345,13 @@ td.action { font-family: var(--mono); font-size: 0.82rem; white-space: nowrap; }
 
 /* Provider marks — same construction as the app's own, so a buyer who
    installs it recognises what they saw here. */
+/* GitHub's brand colour is a near-black, which is correct here and
+   invisible on the dark variant of this page. This is the one provider
+   whose mark cannot use its real colour in both. Set on the element so it
+   beats the inline custom property, which a plain rule would not. */
+@media (prefers-color-scheme: dark) {
+  .pmark[style*="1F2328"] { --pc: #E6EDF3 !important; }
+}
 .pmark {
   display: inline-flex;
   align-items: center;
@@ -597,7 +604,7 @@ footer .mono { color: var(--faint); font-size: 0.76rem; }
               <td class="detail">Disabled Atlassian account for jordan@acme.com (account_id 359e1f61-7f7e-473a…).</td>
             </tr>
             <tr>
-              <td><span class="pname"><span class="pmark" style="--pc:#E6EDF3">Gh</span>GitHub</span></td>
+              <td><span class="pname"><span class="pmark" style="--pc:#1F2328">Gh</span>GitHub</span></td>
               <td class="action">disable_user</td>
               <td><span class="pill pill-ok">Success</span></td>
               <td class="detail">jordan@acme.com was not a member of org 'acme' (already removed or never added) — no action needed.</td>
@@ -691,7 +698,7 @@ footer .mono { color: var(--faint); font-size: 0.76rem; }
       <div class="prov"><span class="pmark" style="--pc:#4285F4">G</span><span class="nm">Google Workspace</span><span class="pill pill-ok">Proven live</span></div>
       <div class="prov"><span class="pmark" style="--pc:#0078D4">E</span><span class="nm">Microsoft Entra ID</span><span class="pill pill-ok">Proven live</span></div>
       <div class="prov"><span class="pmark" style="--pc:#0052CC">A</span><span class="nm">Atlassian</span><span class="pill pill-ok">Proven live</span></div>
-      <div class="prov"><span class="pmark" style="--pc:#E6EDF3">Gh</span><span class="nm">GitHub</span><span class="pill pill-skip">Connected</span></div>
+      <div class="prov"><span class="pmark" style="--pc:#1F2328">Gh</span><span class="nm">GitHub</span><span class="pill pill-skip">Connected</span></div>
       <div class="prov"><span class="pmark" style="--pc:#611F69">S</span><span class="nm">Slack</span><span class="pill pill-skip">Built</span></div>
       <div class="prov"><span class="pmark" style="--pc:#0B5CFF">Z</span><span class="nm">Zoom</span><span class="pill pill-skip">Built</span></div>
       <div class="prov"><span class="pmark" style="--pc:#D97757">An</span><span class="nm">Anthropic (Claude)</span><span class="pill pill-skip">Built</span></div>
@@ -768,9 +775,9 @@ footer .mono { color: var(--faint); font-size: 0.76rem; }
     </p>
 
     <div class="evidence">
-      <div class="ev"><span class="n">1,022</span><span class="l">Tests passing</span></div>
+      <div class="ev"><span class="n">1,189</span><span class="l">Tests passing</span></div>
       <div class="ev"><span class="n">3</span><span class="l">Security reviews</span></div>
-      <div class="ev"><span class="n">7</span><span class="l">Encrypted columns</span></div>
+      <div class="ev"><span class="n">8</span><span class="l">Encrypted columns</span></div>
       <div class="ev"><span class="n">5</span><span class="l">Languages, complete</span></div>
     </div>
   </section>
@@ -799,7 +806,7 @@ footer .mono { color: var(--faint); font-size: 0.76rem; }
 
 <footer>
   <div class="wrap row">
-    <span>JaraLock — Tia Simmons / Blxckroze</span>
+    <span>JaraLock — Tia Simmons</span>
     <span class="mono">ms.blxckroze@blxckroze.com</span>
   </div>
 </footer>

@@ -298,6 +298,18 @@ section:first-of-type { border-top: 0; }
 .btn-quiet:hover { background: var(--surface-2); }
 .cta-note { font-family: var(--mono); font-size: 0.76rem; color: var(--faint); }
 
+/* The buttons above are mailto: links, and on a work machine with webmail
+   and no mail client configured, clicking one does nothing at all — no
+   error, no explanation, and a visitor who concludes the site is broken.
+   The address in plain text is the fallback: it costs one line and it is
+   the difference between that person copying it and that person leaving. */
+.cta-direct {
+  font-family: var(--mono); font-size: 0.82rem; color: var(--muted);
+  margin: 0.85rem 0 0; width: 100%;
+}
+.cta-direct a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+.cta-direct a:hover { border-bottom-color: var(--accent); }
+
 /* ── The run record: the hero image, and the product's real artifact ── */
 .record {
   margin-top: 2.75rem;
@@ -562,6 +574,7 @@ footer .mono { color: var(--faint); font-size: 0.76rem; }
       <a class="btn btn-primary" href="mailto:ms.blxckroze@blxckroze.com?subject=JaraLock%20trial%20request&amp;body=Company%3A%0AYour%20name%3A%0AHow%20many%20employees%3A%0A">Request a 30-day trial</a>
       <a class="btn btn-quiet" href="mailto:ms.blxckroze@blxckroze.com?subject=JaraLock%20licence">Buy a licence</a>
       <span class="cta-note">30 days · no card · full source</span>
+      <p class="cta-direct">Or email <a href="mailto:ms.blxckroze@blxckroze.com">ms.blxckroze@blxckroze.com</a> directly.</p>
     </div>
 
     <!-- The hero is the product's own output rather than an illustration:
@@ -800,6 +813,7 @@ footer .mono { color: var(--faint); font-size: 0.76rem; }
     <div class="cta-row">
       <a class="btn btn-primary" href="mailto:ms.blxckroze@blxckroze.com?subject=JaraLock%20trial%20request&amp;body=Company%3A%0AYour%20name%3A%0AHow%20many%20employees%3A%0A">Request a 30-day trial</a>
       <a class="btn btn-quiet" href="mailto:ms.blxckroze@blxckroze.com?subject=JaraLock%20licence">Email to buy a licence</a>
+      <p class="cta-direct">Or email <a href="mailto:ms.blxckroze@blxckroze.com">ms.blxckroze@blxckroze.com</a> directly.</p>
     </div>
   </section>
 </div>

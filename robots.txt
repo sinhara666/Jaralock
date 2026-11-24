@@ -11,6 +11,9 @@ Allow: /
 # assistant than by typing a query, and some of these crawlers treat an
 # unlisted agent conservatively. There is nothing here worth withholding
 # from them.
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
